@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Alena's Blog</title>
+  <link rel="stylesheet" href="{% static 'src/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'src/css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'src/css/style.css' %}">
+</head>
+<body id="home">
+
+  <nav class="navbar navbar-expand-md navbar-light fixed-top">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="img/mlogo.png" width="35" height="35" alt=""><h3 class="d-inline align-middle"><em>Alena's <small>Blog</small><em></h3>
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#review" class="nav-link">Отзывы</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">Обо мне</a>
+          </li>
+          <li class="nav-item">
+            <a href="#faq" class="nav-link">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a href="#prices" class="nav-link">Стоимость</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SHOWCASE -->
+
+  <section id="showcase" class="py-5">
+    <div class="container">
+      <div class="row">
+      <div class="col-md-3 col-sm-6 ml-auto block_showcase">
+          <h1 class="display-4 pt-5 text">
+              Онлайн обучение
+              "Сам себе имиджмейкер"
+            </h1>
+            <p class="lead " >За 10 уроков вы научитесь создавать стильный образ самостоятельно..</p>
+      </div>
+
+        <div class="col-md-9 col-sm-3">
+
+        </div>
+
+
+      </div>
+
+      </div>
+  </section>
+  <!-- NEWSLETTER -->
+
+    <div class="container-fluid px-0">
+      <input type='submit' class="btn btn-lg btn-block btn1" action="{% url 'blog:lectures' %}"><i class="fa fa-check-circle mx-2 my-2"></i> ЗАПИСАТЬСЯ НА КУРС</input>
+    </div>
+
+
+
+
+  <!-- BOXES -->
+
+  <section id="section3_boxes" class="py-5">
+    <div class="container-fluid">
+      <h1 class="pb-5 text-center">В качестве результата вы получите:</h1>
+      <div class="row">
+        <div class="col-md">
+          <div class="card bg-light text-dark text-center p-3 border-secondary">
+          <blockquote class="blockquote mb-0">
+                <footer class="blockquote-footer">
+             <small><em>Определите свой цветотип и поймете какие цвета работают на вас.</em></small>
+           </footer>
+          </blockquote>
+         </div>
+        </div>
+        <div class="col-md">
+          <div class="card bg-light text-dark text-center p-3 border-secondary">
+          <blockquote class="blockquote mb-0">
+                <footer class="blockquote-footer">
+             <small><em>2.	Поймете какой вы хотите быть и как производить желаемое впечатление с помощью одежды</em></small>
+           </footer>
+          </blockquote>
+         </div>
+        </div>
+        <div class="col-md">
+          <div class="card bg-light text-dark text-center p-3 border-secondary">
+          <blockquote class="blockquote mb-0">
+                <footer class="blockquote-footer">
+             <small><em>Разберете свою косметичку и оставите только необходимое.</em></small>
+           </footer>
+          </blockquote>
+         </div>
+          </div>
+
+        <div class="col-md">
+          <div class="card bg-light text-dark text-center p-3 border-secondary">
+          <blockquote class="blockquote mb-0">
+                <footer class="blockquote-footer">
+             <small><em>3.	Разберите свой гардероб и ваши вещи обретут новую жизнь.</em></small>
+           </footer>
+          </blockquote>
+         </div>
+        </div>
+
+        <div class="col-md">
+          <div class="card bg-light text-dark text-center p-3 border-secondary">
+          <blockquote class="blockquote mb-0">
+                <footer class="blockquote-footer">
+             <small><em>5.	Научитесь использовать аксессуары: сумки,обувь, головные уборы, крашения. Не будет вопроса что и с чем носить.</em></small>
+           </footer>
+          </blockquote>
+         </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+<section id="">
+  <div class="container px-0 pb-5">
+    <h1 class="text-primary pb-5 ml-5 "><em>Если Вы:</em></h1>
+  <ul class="list-group">
+      <a class="list-group-item list-group-item-action" href="#"><em>Не любите шоппинг и покупаете бесполезную вещь, чтобы он быстрее закончился</em></a>
+      <a class="list-group-item list-group-item-action" href="#"><em>У вас много одежды, а комбинировать ее между собой вы не умеете</em></a>
+      <a class="list-group-item list-group-item-action" href="#"><em>Совершаете покупки на основе эмоций, а после вещь лежит не нужной</em></a>
+      <a class="list-group-item list-group-item-action" href="#"><em>Вы работаете в сфере, где внешний вид должен вас презентовать с определенной стороны</em></a>
+      <a class="list-group-item list-group-item-action" href="#"><em>Вы хотите научиться чувствовать стиль и выражать себя через одежду</em></a>
+      <a class="list-group-item list-group-item-action" href="#"><em>Ваша социальная роль изменилась и ваш гардероб не соответствует ей</em></a>
+      <a class="list-group-item list-group-item-action" href="#"><em>Вы хотите научиться чувствовать стиль и выражать себя через одежду</em></a>
+      <a class="list-group-item list-group-item-action" href="#"><em>Вы хотите составлять family-look. И да, это не одинаковые свитера с оленем</em></a>
+  </ul>
+  </div>
+</section>
+
+<div class="container-fluid px-0">
+  <button class="btn btn-lg btn-block btn1" action="{% url 'blog:lectures' %}" ><i class="fa fa-check-circle mx-2 my-2"></i>ЗАЙМИ СВОЕ МЕСТО НА КУРСЕ</button>
+</div>
+
+<section id="review">
+  <div class="container-fluid">
+    <h1 class="text-center mt-5"><em>Отзывы участниц</em></h1>
+
+<div class="row my-5 mx-5">
+<div class="col-md-3 mb-2 p-0">
+<div class="card bg-dark text-white">
+  <img class="card-img" src="{% static 'src/img/1a.jpg' %}">
+</div>
+</div>
+<div class="col-md-3 mb-2">
+<div class="card bg-dark text-white">
+  <img class="card-img" src="{% static 'src/img/2a.jpg' %}">
+</div>
+</div>
+<div class="col-md-3 mb-2">
+<div class="card bg-dark text-white">
+  <img class="card-img" src="{% static 'src/img/8a.jpg' %}">
+</div>
+</div>
+<div class="col-md-3 mb-2">
+<div class="card bg-dark text-white">
+  <img class="card-img" src="{% static 'src/img/9a.jpg' %}">
+</div>
+</div>
+<div class="col-md-3 mb-2">
+<div class="card bg-dark text-white">
+  <img class="card-img" src="{% static 'src/img/7a.jpg' %}">
+</div>
+</div>
+<div class="col-md-3 mb-2">
+<div class="card bg-dark text-white">
+  <img class="card-img" src="{% static 'src/img/6a.jpg' %}">
+</div>
+</div>
+<div class="col-md-3 mb-2">
+<div class="card bg-dark text-white">
+  <img class="card-img" src="{% static 'src/img/5a.jpg' %}">
+</div>
+</div>
+<div class="col-md-3 mb-2">
+<div class="card bg-dark text-white">
+  <img class="card-img" src="{% static 'src/img/3a.jpg' %}">
+</div>
+</div>
+
+
+  </div>
+  </div>
+
+</section>
+<section>
+  <div class="container">
+    <h1 class="pb-5 text-center"><em>Программа курса<em></h1>
+    <ul class="list-group mb-5">
+
+        <li class="list-group-item  list-group-item-info">Урок 1. Цветотипы. Научитесь определять свой цветотип и цветовую палитру,в рамках которой вы можете двигаться.</li>
+        <li class="list-group-item  list-group-item-info">Урок 2. Сочетания по цвету. Изучим цветовой круг и вы поймете почему какой-то образ цепляет.</li>
+        <li class="list-group-item  list-group-item-info">Урок 3. Образ с принтами.</li>
+        <li class="list-group-item list-group-item-info">Урок 4. Женская стилистика.</li>
+        <li class="list-group-item  list-group-item-info">Урок 5. Образ по стилевому вектору.</li>
+        <li class="list-group-item  list-group-item-info">Урок 6. Аксессуары. Платки, очки, серьги, головные уборы.</li>
+        <li class="list-group-item  list-group-item-info">Урок 7. Украшения. Броши, браслеты, часы, кольца, бабочки, галстуки.</li>
+        <li class="list-group-item  list-group-item-info">Урок 8. Аксессуары. Сумки, ремни, колготки.</li>
+        <li class="list-group-item  list-group-item-info">Урок 9. Аксессуары. Обувь, зонты, носки, шнурки.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="container-fluid px-0">
+  <button class="btn btn-lg btn-block btn1"  action="{% url 'blog:lectures' %}"><i class="fa fa-check-circle mx-2 my-2"></i> ЗАПИСАТЬСЯ НА КУРС</button>
+</div>
+
+
+    <section id="prices">
+    <div class="container">
+    <h1 class="text-center my-5">Cтоимость Курса</h1>
+    <div class="row ">
+      <div class="col-md-4 mb-5">
+        <div class="card" style="width:20rem">
+            <img class="card-img-top" src="{% static 'src/img/left_picture.jpeg'%}" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Икона Стиля</h4>
+                <p class="card-text">Лекции сохраняются в течении месяца. Личный чат со мной.
+                    Проверка домашнего задания - ответы на вопросы в режиме тет-а-тет
+                </p>
+                 <a href="#" class="btn btn-danger btn-block">6000р. (мест нет)</a>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5 ml-auto">
+        <div class="card" style="width:20rem">
+            <img class="card-img-top" src="{% static 'src/img/right_picture.jpeg'%}" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title">Card Title</h4>
+                <p class="card-text">Каждая лекция сохраняется 23 часа. Общий рабочий чат.
+                      Проверка домашнего задания в общей группе.
+
+                      </p>
+                 <a href="#" class="btn btn-success btn-block">Стоимость 2000р</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </section>
+
+
+
+  <!-- ABOUT / WHY SECTION -->
+  <section id="" class="py-5 text-center bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="info-header mb-5">
+            <h1 class="pb-3">
+              F.A.Q.
+            </h1>
+
+
+          </div>
+
+          <!-- ACCORDION -->
+          <div id="accordion" role="tablist">
+            <div class="card">
+              <div class="card-header" id="heading1">
+                <h5 class="mb-2">
+                  <div href="#collapse1" data-toggle="collapse" data-parent="#accordion">
+                     Как проходит обучение?
+                  </div>
+                </h5>
+              </div>
+
+              <div id="collapse1" class="collapse show">
+                <div class="card-body">
+                  После оплаты, вам на почту придут ссылки на закрытые группы в вк, инстаграм и чат.<br>
+                  Уроки будут проходить в закрытом аккаунте инстаграм в прямом эфире в 13:00 по МСК.<br>
+                  Урок сохраняется 23 часа.
+
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="heading2">
+                <h5 class="mb-2">
+                  <div href="#collapse2" data-toggle="collapse" data-parent="#accordion">
+                     Нужно ли покупать одежду для обучения?
+                  </div>
+                </h5>
+              </div>
+
+              <div id="collapse2" class="collapse">
+                <div class="card-body">
+                  Hет. Домашнюю работу вы будете делать на своей одежде или в бесплатном приложении.
+
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="heading2">
+                <h5 class="mb-2">
+                  <div href="#collapse3" data-toggle="collapse" data-parent="#accordion">
+                    У меня мало времени-смогу ли я обучаться?
+                  </div>
+                </h5>
+              </div>
+
+              <div id="collapse3" class="collapse">
+                <div class="card-body">
+                     Длительность урока 1,5 часа. На выполнение домашнего задания уходит в среднем 1 час.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="heading2">
+                <h5 class="mb-2">
+                  <div href="#collapse4" data-toggle="collapse" data-parent="#accordion">
+                    Можно ли изменить тариф в процессе обучения?
+                  </div>
+                </h5>
+              </div>
+
+              <div id="collapse4" class="collapse">
+                <div class="card-body">
+                    Можно. Необходимо будет доплатить разницу в цене.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHORS -->
+  <section id="about" class="my-5 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="info-header mb-5">
+            <h1 class="text-primary pb-3">
+              Обо Мне
+            </h1>
+            <p class="lead pb-3">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet omnis fuga maiores excepturi dolores explicabo.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img src="{%   static 'src/img/person1.jpg' %}" alt="" class="img-fluid rounded-circle w-100 mb-3">
+              <h3>Susan Williams</h3>
+              <h5 class="text-muted">Lead Writer</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae molestiae alias expedita quae esse ut.</p>
+              <div class="d-flex flex-row justify-content-center">
+                <div class="p-4">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </div>
+                <div class="p-4">
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="p-4">
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img src="img/person2.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+              <h3>Grace Smith</h3>
+              <h5 class="text-muted">Co-Writer</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae molestiae alias expedita quae esse ut.</p>
+              <div class="d-flex flex-row justify-content-center">
+                <div class="p-4">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </div>
+                <div class="p-4">
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="p-4">
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img src="img/person3.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+              <h3>John Doe</h3>
+              <h5 class="text-muted">Editor</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae molestiae alias expedita quae esse ut.</p>
+              <div class="d-flex flex-row justify-content-center">
+                <div class="p-4">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </div>
+                <div class="p-4">
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="p-4">
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <img src="img/person4.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+              <h3>Kevin Swanson</h3>
+              <h5 class="text-muted">Designer</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae molestiae alias expedita quae esse ut.</p>
+              <div class="d-flex flex-row justify-content-center">
+                <div class="p-4">
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </div>
+                <div class="p-4">
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="p-4">
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% block body %}
+  {% endblock body %}
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <h3>Get In Touch</h3>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, et.</p>
+          <form action="{% url 'blog:home' %}" method="post">
+            <div class="form-group">
+                {{form|crispy}}
+                {% csrf_token %}
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary btn-block btn-lg">
+          </form>
+        </div>
+        <div class="col-lg-3 align-self-center">
+          <img src="img/mlogo.png" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="main-footer" class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-6 ml-auto">
+          <p class="lead">Copyright &copy; 2017</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- CONTACT MODAL -->
+
+
+
+
+  <script src="{% static 'src/js/jquery.min.js' %}"></script>
+  <script src="{% static 'src/js/popper.min.js' %}"></script>
+  <script src="{% static 'src/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'src/js/navbar-fixed.js' %}"></script>
+</body>
+</html>

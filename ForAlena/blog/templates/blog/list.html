@@ -1,0 +1,25 @@
+{% for user in users %}
+     <ul>
+       <li>{{ user.username }}</td>
+       <li>{{ user.first_name }}</td>
+       <li>{{ user.email }}</td>
+     </ur>
+   {% endfor %}
+
+<div class="pagination">
+    <span class="step-links">
+        {% if user.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ users.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ user.number }} of {{ user.paginator.num_pages }}.
+        </span>
+
+        {% if contacts.has_next %}
+            <a href="?page={{ users.next_page_number }}">next</a>
+            <a href="?page={{ users.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>

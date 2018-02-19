@@ -1,0 +1,41 @@
+body {
+  color: #221616;
+  background-color: #ECE7E3; }
+  body .navbar {
+    box-shadow: 2px 2px 5px black;
+    opacity: 0.7;
+    background: #ECE7E3; }
+    body .navbar .nav-item {
+      font-size: 1.4rem;
+      padding-right: 20px; }
+  body #showcase {
+    background: url("../img/1.jpeg") no-repeat;
+    min-height: 820px;
+    background-size: cover;
+    background-attachment: fixed; }
+    body #showcase .block_showcase {
+      color: #221616;
+      margin-top: 150px !important; }
+  body .btn1 {
+    background: #82EC83;
+    border-radius: 0;
+    height: 100px; }
+  body #section3_boxes .card {
+    background: #BDADA0;
+    border: 1px solid #ddd;
+    height: 150px; }
+  body #opinions .card {
+    background-size: contain; }
+  body .info-header {
+    width: 50%;
+    margin: auto;
+    border-bottom: 1px #ddd solid; }
+  body #authors img {
+    margin-top: -50px; }
+  body #authors .fa {
+    font-size: 25px; }
+  body #authors .card:hover {
+    background: #ECE7E3;
+    color: #fff; }
+    body #authors .card:hover .fa {
+      color: #fff; }
